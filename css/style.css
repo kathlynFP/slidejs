@@ -16,6 +16,8 @@ img{
   width: 1000px;
   height: 500px;
   overflow: hidden;
+  border: 2px solid red;
+  position: relative;
 }
 ul{
   width:  3000px;
@@ -23,7 +25,6 @@ ul{
   clear: both; 
   position: relative;
   margin: 0;
-  border: 2px solid red;
   list-style: none;
 }
 .item-slide{
@@ -35,5 +36,28 @@ ul{
   
 }
 .content-buttons{
+  width: 1000px;
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+.content-buttons button{  
+  border: none;
+  outline: none;
+  text-indent: -9999999px;
+  width: 70px;
+  height: 70px;
+
+}
+#btn-prev, #btn-prev2{
+  background: url('../img/arrow-left.png') no-repeat;
+  background-size: contain;
+  margin-left: 10px;
+}
+#btn-next, #btn-next2{
+  background: url('../img/arrow-rigth.png') no-repeat;
+  background-size: contain;
+  float: right;
+  margin-right: 5px;
 }

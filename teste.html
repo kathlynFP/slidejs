@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <title>Document</title>
+</head>
+<body>
+  <div class="teste">
+
+  </div>
+  <script>
+    function Produto(nome) {
+      this.nome = nome;
+      this.qtdEstoque = 10;
+    }
+    Produto.prototype.getEstoque = function(){
+      return this.qtdEstoque;
+    }
+
+    var livro = new Produto();
+    console.log(livro.getEstoque());
+
+    var livro2 = new Produto();
+    console.log(livro2.getEstoque());
+    //---------------
+
+    function liga() {
+      this.ligado = true;
+    }
+    function Ventilador(velMax) {
+      this.velocidadeMaxima = velMax;
+      this.ligado = false;
+      this.ligar = liga;
+
+    }
+
+    var ventilador1 = new Ventilador(4);
+    console.log(ventilador1.ligado);
+    ventilador1.ligar();
+    console.log(ventilador1.ligado);
+
+
+  </script>
+</body>
+</html>
